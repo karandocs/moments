@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crush_number: MyString
+  message_for_them: MyText
+  why_you_like_them: MyText
+  things_you_should_change: MyString
+
+two:
+  crush_number: MyString
+  message_for_them: MyText
+  why_you_like_them: MyText
+  things_you_should_change: MyString

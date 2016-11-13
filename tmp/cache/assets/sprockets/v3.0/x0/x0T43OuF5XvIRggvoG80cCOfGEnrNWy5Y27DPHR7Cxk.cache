@@ -1,0 +1,17 @@
+I"-(function() {
+  $(document).on('turbolinks:load', function() {
+    return $('.datepicker').datetimepicker({
+      format: "YYYY-MM-DD HH:mm"
+    });
+  });
+
+  return;
+
+  $(document).on('turbolinks:load', function() {
+    return alert("Made with &#10084; by Karan :)");
+  });
+
+  return;
+
+}).call(this);
+:ET

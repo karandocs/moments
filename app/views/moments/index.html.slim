@@ -1,0 +1,56 @@
+.container
+  h1.pluralize.titleize.text-center
+    | Lets get you there &nbsp;
+    span.fa.fa-heart
+  hr
+  .col-md-12
+    = simple_form_for @moment do |f|
+      .form-group
+        = f.input :message, placeholder:"How you doing today?" , input_html: {:class => 'form-control height_time'}
+        = f.input :picture
+        = f.input :moment_time, as: :string, input_html: {class: 'datepicker'}, placeholder: "Moment time", class: "form-control", required: true, label: false
+      .form-actions
+        = f.submit 'Update moment ', class:"btn btn-info"
+
+.row
+  - if @moments.present?
+    .col-md-10.col-md-offset-1
+      .timeline-centered
+        - x = 1
+        - y = @moments.count
+        - @moments.each do |moment|
+          -if cycle('odd', 'even') == 'odd'
+            article.timeline-entry
+              .timeline-entry-inner
+                time.timeline-time datetime="2014-01-09T13:22"
+                  span On #{moment.moment_time.strftime("%b %d")}
+                  span #{moment.moment_time.strftime("%l:%M%P")}
+                .timeline-icon.bg-info
+                  i.entypo-location
+                .timeline-label
+                  blockquote #{moment.message}
+                  #{moment.unexpected_happiness}
+                  #{moment.disappointments}
+                  - if moment.picture.present?
+                    =link_to image_tag(moment.picture, class:" img-responsive img-rounded full-width"), moment_path(moment)
+
+          - else
+            article.timeline-entry.left-aligned
+              .timeline-entry-inner
+                time.timeline-time datetime="2014-01-10T03:45"
+                  span On #{moment.moment_time.strftime("%b %d")}
+                  span #{moment.moment_time.strftime("%l:%M%P")}
+                .timeline-icon.bg-warning
+                  i.entypo-camera
+                .timeline-label
+                  blockquote #{moment.message}
+                  #{moment.unexpected_happiness}
+                  #{moment.disappointments}
+                  - if moment.picture.present?
+                    =link_to image_tag(moment.picture, class:" img-responsive img-rounded full-width"), moment_path(moment)
+          - if x == y
+            article.timeline-entry.begin
+              .timeline-entry-inner
+                .timeline-icon style=("-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);")
+                  i.entypo-flight
+          - x = x + 1

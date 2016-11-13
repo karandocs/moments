@@ -1,0 +1,11 @@
+= simple_form_for(@wish) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :wish
+    = f.input :reason
+    = f.input :should_happen_on
+    = f.input :completed
+
+  .form-actions
+    = f.button :submit

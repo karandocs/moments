@@ -1,0 +1,23 @@
+I"þ(function() {
+  $(document).on('click', '#search', function() {
+    var search_term;
+    search_term = $('#number').val();
+    $.ajax('crushes.html');
+    return {
+      type: 'GET',
+      data: {
+        search: search_term
+      },
+      success: function(data, jqxhr, textStatus) {
+        return $('#table').html(data);
+      },
+      error: function(jqxhr, textStatus, errorThrown) {
+        return $.jGrowl('Something went wrong.', {
+          life: 2000
+        });
+      }
+    };
+  });
+
+}).call(this);
+:ET

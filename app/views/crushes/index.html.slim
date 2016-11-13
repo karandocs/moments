@@ -1,0 +1,27 @@
+h1 Listing crushes
+
+table.table
+  thead
+    tr
+      th Crush number
+      th Message for them
+      th Why you like them
+      th Things you should change
+      th
+      th
+      th
+
+  tbody
+    - @crushes.each do |crush|
+      tr
+        td = crush.crush_number
+        td = crush.message_for_them
+        td = crush.why_you_like_them
+        td = crush.things_you_should_change
+        td = link_to 'Show', crush
+        td = link_to 'Edit', edit_crush_path(crush)
+        td = link_to 'Destroy', crush, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Crush', new_crush_path

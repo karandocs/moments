@@ -1,0 +1,10 @@
+I" (function() {
+  $(document).on('keyup', '#search', function() {
+    ({
+      number: $('#number').val()
+    });
+    return alert(number);
+  });
+
+}).call(this);
+:ET

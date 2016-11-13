@@ -1,0 +1,13 @@
+= simple_form_for @moment do |f|
+  .form-group
+    =f.input :unexpected_happiness, :class => 'form-control'
+  .form-group
+    = f.input :disappointments, :class => 'form-control'
+  .form-group
+    = f.input :message, :class => 'form-control'
+  .form-group
+    = f.input :moment_time, :class => 'form-control'
+  .form-group
+    = f.input :picture, :class => 'form-control'
+  .form-actions
+    = f.submit

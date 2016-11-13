@@ -1,0 +1,11 @@
+= simple_form_for(@crush) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :crush_number
+    = f.input :message_for_them
+    = f.input :why_you_like_them
+    = f.input :things_you_should_change
+
+  .form-actions
+    = f.button :submit

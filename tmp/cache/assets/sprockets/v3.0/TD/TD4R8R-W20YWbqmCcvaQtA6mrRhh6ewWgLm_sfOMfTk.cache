@@ -1,0 +1,9 @@
+I"¡(function() {
+  $(document).on('click', '#search', function() {
+    var number;
+    number = $('#number').val();
+    return alert(number);
+  });
+
+}).call(this);
+:ET

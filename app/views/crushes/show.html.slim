@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Crush number:
+  = @crush.crush_number
+p
+  strong Message for them:
+  = @crush.message_for_them
+p
+  strong Why you like them:
+  = @crush.why_you_like_them
+p
+  strong Things you should change:
+  = @crush.things_you_should_change
+
+= link_to 'Edit', edit_crush_path(@crush)
+'|
+= link_to 'Back', crushes_path

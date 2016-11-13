@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unexpected_happiness: MyString
+  disappointments: MyString
+  message: MyString
+
+two:
+  unexpected_happiness: MyString
+  disappointments: MyString
+  message: MyString

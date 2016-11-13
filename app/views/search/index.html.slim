@@ -1,0 +1,10 @@
+.container.mt10
+  .col-md-6.col-md-offset-3.text-center
+    h1.text-center Got any message from your crush?
+    input.form-control.mt5#number data-behaviour="crush_number" type="text" placeholder="Enter your number.."
+    button.btn.btn-success.btn-lg.mt5#search type="submit" Click me
+- @crushes.each do |crush|
+  .col-md-12
+    h1
+      = crush.crush_number
+= render 'crushes/table.html'

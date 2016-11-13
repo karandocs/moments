@@ -1,0 +1,1 @@
+json.array! @crushes, partial: 'crushes/crush', as: :crush

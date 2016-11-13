@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wish: MyText
+  reason: MyString
+  should_happen_on: 2016-07-31 23:08:37
+  completed: false
+
+two:
+  wish: MyText
+  reason: MyString
+  should_happen_on: 2016-07-31 23:08:37
+  completed: false

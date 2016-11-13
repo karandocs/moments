@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moments</title>
+    <%= csrf_meta_tags %>
+
+    <!-- Ensure devices display responsive pages properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!-- Le fonts -->
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Poiret+One" %>
+    <!-- Le styles -->
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= yield :styles %>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascript %>
+
+    <!-- Le fav and touch icons -->
+    <%= favicon_link_tag 'favicon.jpg' %>
+    <%# favicon_link_tag "apple-touch-icon.png", :rel => "apple-touch-icon" %>
+
+    <%= yield :head %>
+  </head>
+  <body class="container-fluid">
+
+    <div id="main" class="">
+      <div class="row">
+        <%= yield %>
+      </div> <!-- /.container -->
+    </div> <!-- /#main -->
+
+
+
+  </body>
